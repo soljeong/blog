@@ -1,0 +1,11 @@
+shape: sequence_diagram
+con: Controller
+ser: Service
+rep: Repository
+
+getList: {
+  con -> ser
+  ser -> rep
+  rep -> ser
+  ser -> con
+}
