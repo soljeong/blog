@@ -6,6 +6,7 @@ import com.example.blog.DataNotFoundException;
 
 import lombok.RequiredArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,6 +27,14 @@ public class BoardService {
         } else {
             throw new DataNotFoundException("board not found");
         }
+    }
+
+    public void create(String title, String content) {
+        Board b = new Board();
+        b.setTitle(title);
+        b.setContent(content);
+        b.setCreateDate(LocalDateTime.now());
+        this.boardRepository.save(b);
     }
 
 }

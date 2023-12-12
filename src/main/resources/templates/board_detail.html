@@ -21,9 +21,12 @@
   <hr />
 
   <div class="card">
-    <form th:action="@{|/comment/create/${board.id}|}" method="post">
+    <form th:action="@{|/comment/create/${board.id}|}" th:object="${commentForm}" method="post">
+      <div class="alert alert-danger" role="alert" th:if="${#fields.hasAnyErrors()}">
+        <div th:each="err : ${#fields.allErrors()}" th:text="${err}" />
+    </div>
       <div class="card-body">
-        <textarea name="content" class="form-control" rows="1"></textarea>
+        <textarea th:field="*{content}" class="form-control" rows="1"></textarea>
       </div>
       <div class="card-footer">
         <button type="submit" id="btn-reply-save" class="btn btn-primary">등록</button>

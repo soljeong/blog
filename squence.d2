@@ -9,3 +9,17 @@ getList: {
   rep -> ser
   ser -> con
 }
+
+detail: {
+  con -> ser : id
+  ser -> rep
+  rep -> ser
+  ser -> con : model, id, form
+}
+
+create: {
+  con -> ser : form
+  ser -> rep
+  rep -> ser
+  ser -> con
+}
