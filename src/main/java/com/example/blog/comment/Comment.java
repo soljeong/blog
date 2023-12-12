@@ -1,6 +1,8 @@
-package com.example.blog;
+package com.example.blog.comment;
 
 import java.time.LocalDateTime;
+
+import com.example.blog.board.Board;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

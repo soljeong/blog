@@ -1,6 +1,8 @@
-package com.example.blog;
+package com.example.blog.board;
 import java.time.LocalDateTime;
 import java.util.List;
+
+import com.example.blog.comment.Comment;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;

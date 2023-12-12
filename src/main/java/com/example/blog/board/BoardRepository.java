@@ -1,4 +1,4 @@
-package com.example.blog;
+package com.example.blog.board;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

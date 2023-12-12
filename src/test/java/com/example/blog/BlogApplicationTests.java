@@ -4,6 +4,11 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.example.blog.board.Board;
+import com.example.blog.board.BoardRepository;
+import com.example.blog.comment.Comment;
+import com.example.blog.comment.CommentRepository;
+
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.time.LocalDateTime;
