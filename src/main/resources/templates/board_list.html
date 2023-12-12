@@ -1,8 +1,5 @@
-<!-- cdn -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<div class="container my-3">
+<html layout:decorate="~{layout}">
+<div layout:fragment="content" class="container my-3">
     <!-- 카드 글 시작 -->
     <div th:each="board, loop : ${boardList}" class="card">
         <div class="card-body">
@@ -14,7 +11,7 @@
             <h5 th:text="${#temporals.format(board.createDate, 'yyyy-MM-DD HH:mm')}"></h5>
         </div>
     </div>
-    <br>
+    <br />
     <!-- 카드 글 끝 -->
 
     <!-- disabled -->
@@ -37,5 +34,6 @@
             </c:otherwise>
         </c:choose>
     </ul> -->
-
 </div>
+
+</html>
