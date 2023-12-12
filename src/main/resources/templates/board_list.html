@@ -1,11 +1,17 @@
-<div class="container">
+<!-- cdn -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<div class="container my-3">
     <!-- 카드 글 시작 -->
-    <div th:each="board : ${boardList}" class="card">
+    <div th:each="board, loop : ${boardList}" class="card">
         <div class="card-body">
+            [[${loop.count}]]
             <!-- th:text를 사용하여 텍스트 값을 출력할 수 있습니다. -->
             <h4 class="card-title" th:text="${board.title}"></h4>
             <!-- th:href를 사용하여 href 값을 동적으로 설정할 수 있습니다. -->
             <a th:href="@{/board/detail/{id}(id=${board.id})}" class="btn btn-primary">상세보기</a>
+            <h5 th:text="${#temporals.format(board.createDate, 'yyyy-MM-DD HH:mm')}"></h5>
         </div>
     </div>
     <br>
