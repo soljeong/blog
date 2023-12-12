@@ -1,8 +1,19 @@
-Board : {
-    shape : class
-    
-    -id
-    -title
-    -content
-    -createDate
-    }
+Board: {
+  shape: class
+
+  -id
+  -title
+  -content
+  -createDate
+  -commentList
+}
+
+Comment: {
+  shape: class
+
+  -id
+  -title
+  -content
+  -createDate
+  -board
+}
