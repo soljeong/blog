@@ -1,0 +1,35 @@
+<div class="container">
+    <!-- 카드 글 시작 -->
+    <div th:each="board : ${boardList}" class="card">
+        <div class="card-body">
+            <!-- th:text를 사용하여 텍스트 값을 출력할 수 있습니다. -->
+            <h4 class="card-title" th:text="${board.title}"></h4>
+            <!-- th:href를 사용하여 href 값을 동적으로 설정할 수 있습니다. -->
+            <!-- <a th:href="@{/board/{id}(id=${board.id})}" class="btn btn-primary">상세보기</a> -->
+        </div>
+    </div>
+    <br>
+    <!-- 카드 글 끝 -->
+
+    <!-- disabled -->
+    <!-- <ul class="pagination d-flex justify-content-center">
+        <c:choose>
+            <c:when test="${boardEntity.first}">
+                <li class="page-item disabled"><a class="page-link"
+                        href="/board?page=${boardsEntity.number - 1}">Prev</a></li>
+            </c:when>
+            <c:otherwise>
+                <li class="page-item"><a class="page-link" href="/board?page=${boardsEntity.number - 1}">Prev</a></li>
+            </c:otherwise>
+        </c:choose>
+        <c:choose>
+            <c:when test="${boardsEntity.last}">
+                <li class="page-item disabled"><a class="page-link" href="/board?page=${param.page + 1}">Next</a></li>
+            </c:when>
+            <c:otherwise>
+                <li class="page-item"><a class="page-link" href="/board?page=${param.page + 1}">Next</a></li>
+            </c:otherwise>
+        </c:choose>
+    </ul> -->
+
+</div>
